@@ -1,3 +1,5 @@
+import "./FruitList.css";
+import ListGroup from 'react-bootstrap/ListGroup';
 
 // let someFruit = [
 // 	"mangoes",
@@ -37,9 +39,9 @@ export default function FruitList(props){
     }
 
 	let listOfFruit = props.listToShow.map(fruit => {
-        return <li key={fruit}> 
+        return <ListGroup.Item key={fruit}> 
             {fruit}
-        </li>
+        </ListGroup.Item>
     });
 
     return <span>
