@@ -14,7 +14,11 @@ function App() {
       <ul>
         {/* Array of li tags with fruit names as contents */}
         {/* Use custom JSX element: */}
-        <FruitList /> 
+        <h1>Fruits List 1</h1>
+        <FruitList listToShow={['banana', 'mango']}/> 
+
+        <h1>Fruits List 2</h1>
+        <FruitList listToShow={['apple', 'oranges', 'pears']}/> 
       </ul>
     </div>
   );
