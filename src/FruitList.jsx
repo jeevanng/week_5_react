@@ -30,11 +30,22 @@
 // Functions MUST return JSX, if you want to use it as HTML 
 // aka in place of inline JSX 
 export default function FruitList(props){
-	return props.listToShow.map(fruit => {
+
+    // On wednesdays if there is pineapple, we return null
+    if(props.listToShow.includes("pineapple") && new Date(Date.now()).getDay() === 3){
+        return null;
+    }
+
+	let listOfFruit = props.listToShow.map(fruit => {
         return <li key={fruit}> 
             {fruit}
         </li>
     });
+
+    return <span>
+        {listOfFruit}
+        {props.children}
+    </span>
 }
 
 // module.exports = FruitList;
